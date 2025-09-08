@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import SaintsToast from './SaintsToast'
+import fleurDeLis from '../assets/FdL.png'
 
 function LivePlayTracking({ gameSession, onEndGame }) {
   const [playData, setPlayData] = useState({
@@ -175,7 +176,7 @@ function LivePlayTracking({ gameSession, onEndGame }) {
 
       {playersUnder8.length > 0 && (
         <div className="players-under-8-alert">
-          <h4>⚜ Saints Need More Time ({playersUnder8.length} under 8 plays)</h4>
+          <h4><img src={fleurDeLis} alt="Fleur-de-lis" className="inline-fdl" /> Saints Need More Time ({playersUnder8.length} under 8 plays)</h4>
           <div className="under-8-list">
             {playersUnder8.map(player => (
               <span key={player.id} className="under-8-player">

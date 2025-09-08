@@ -48,28 +48,32 @@ body {
   text-align: center;
   box-shadow: 0 4px 8px rgba(15, 26, 46, 0.3);
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.app-header::before {
-  content: "⚜";
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: var(--saints-gold);
-  opacity: 0.8;
+.header-fdl-left,
+.header-fdl-right {
+  height: 3rem;
+  width: auto;
+  opacity: 0.9;
+  filter: brightness(0) saturate(100%) invert(76%) sepia(12%) saturate(1048%) hue-rotate(20deg) brightness(92%) contrast(88%);
+  transition: all 0.3s ease;
 }
 
-.app-header::after {
-  content: "⚜";
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: var(--saints-gold);
-  opacity: 0.8;
+.header-fdl-left:hover,
+.header-fdl-right:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.header-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .saints-title {
@@ -165,12 +169,6 @@ body {
   position: relative;
 }
 
-.roster-header h2::after {
-  content: "⚜";
-  color: var(--saints-gold);
-  font-size: 0.8em;
-  margin-left: 0.5rem;
-}
 
 .roster-header p {
   color: var(--saints-navy);
@@ -890,13 +888,14 @@ body {
 }
 
 .player-tracking-card.plays-8-plus::before {
-  content: "⚜";
+  content: url('./assets/FdL.png');
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  color: var(--saints-gold);
-  font-size: 1.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
   opacity: 0.8;
+  filter: brightness(0) saturate(100%) invert(76%) sepia(12%) saturate(1048%) hue-rotate(20deg) brightness(92%) contrast(88%);
 }
 
 .player-tracking-card {
@@ -1202,6 +1201,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.toast-fdl {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: brightness(0) saturate(100%) invert(14%) sepia(79%) saturate(1284%) hue-rotate(207deg) brightness(89%) contrast(94%);
+}
+
+.inline-fdl {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  filter: brightness(0) saturate(100%) invert(76%) sepia(12%) saturate(1048%) hue-rotate(20deg) brightness(92%) contrast(88%);
+}
+
+.toast-icon {
   min-width: 2rem;
 }
 

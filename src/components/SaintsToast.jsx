@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import fleurDeLis from '../assets/FdL.png'
 
 function SaintsToast({ message, type, onClose, duration = 3000 }) {
   useEffect(() => {
@@ -14,7 +15,7 @@ function SaintsToast({ message, type, onClose, duration = 3000 }) {
   return (
     <div className={`saints-toast saints-toast-${type}`}>
       <div className="toast-icon">
-        {type === 'celebration' && '⚜'}
+        {type === 'celebration' && <img src={fleurDeLis} alt="Fleur-de-lis" className="toast-fdl" />}
         {type === 'achievement' && '🏆'}
         {type === 'warning' && '⚠️'}
         {type === 'success' && '✓'}

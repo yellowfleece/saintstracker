@@ -3,6 +3,7 @@ import RosterManagement from './components/RosterManagement'
 import GameSetup from './components/GameSetup'
 import LivePlayTracking from './components/LivePlayTracking'
 import GameSummary from './components/GameSummary'
+import fleurDeLis from './assets/FdL.png'
 import './App.css'
 
 function App() {
@@ -71,9 +72,13 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <div className="saints-title">Silver Spring Saints</div>
-        <div className="saints-subtitle">Play Tracker</div>
-        <div className="saints-tagline">Building Character Through Every Play</div>
+        <img src={fleurDeLis} alt="Fleur-de-lis" className="header-fdl-left" />
+        <div className="header-content">
+          <div className="saints-title">Silver Spring Saints</div>
+          <div className="saints-subtitle">Play Tracker</div>
+          <div className="saints-tagline">Building Character Through Every Play</div>
+        </div>
+        <img src={fleurDeLis} alt="Fleur-de-lis" className="header-fdl-right" />
       </header>
       
       <nav className="app-nav">
